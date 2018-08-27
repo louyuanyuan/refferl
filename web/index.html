@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <script src="js/jquery-3.1.1.min.js"></script>
+  
+  <!-- echart -->
+  <script src="echarts/dist/echarts.min.js"></script>
+  <script src="js/macarons.js"></script>
+  <!-- Bootstrap -->
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body style="background-color: rgb(64, 74, 89) ;"> 
+<!-- header -->
+<nav class="nav" style="background-color: white; width:100%;height: 60px; ">
+   <div class="container">
+    <div class="logo" style="color: rgb(64, 74, 89);">
+      <h3>Shooting in US</h3>
+    </div>
+   </div>
+</nav>
+
+<nav class="nav" style="background-color: rgb(64, 74, 89); width:100%;height:70px; ">
+   <div class="container">
+    <div class="logo" style="color: white;">
+      <h1></h1>
+    </div>
+   </div>
+</nav>
+
+
+<!-- banner -->
+<div class="jumbotron" style="background-color: rgb(64, 74, 89);width: 100%;" >
+  <div class="container">
+    <div id="" style="height: 500px; margin-top:0px"></div>
+  </div>
+</div>
+
+
+
+<!--content 1-->
+<div class="content1" style="background-color: white;margin-top:0px;padding-top: 80px;padding-bottom: 80px" >
+  <div class="container">
+     <div class="row">
+        <div class="col-md-6" style="padding-top: 50px">
+            <img style="width: 100%;" src="" class="img-circle" ></img>
+        </div>
+        <div class="col-md-6">
+            <div style="white-space:normal; width:90%;word-wrap:break-word;color:rgb(64, 74, 89);font-size: 20px">
+                <p></p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--content 2-->
+<div class="content2" style="background-color: rgb(64, 74, 89);margin-top: 60px;margin-bottom: 80px" >
+  <div class="container">
+     <div class="row">
+        <div class="col-md-6" style="height: auto">
+            <div style="white-space:normal; width:90%;word-wrap:break-word;color:#D7D9DE;font-size: 20px">
+                <p> </p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 400px;padding-top: 100px">
+            <img style="width:100%" src=""></img>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="nav" style="background-color: white; width:100%;height: 60px; ">
+   <div class="container">
+    <div class="logo" style="color: rgb(64, 74, 89);">
+      <h3>©️YUAN LOU 2963373</h3>
+    </div>
+   </div>
+</nav>
+
+
+
+
+
+<!-- js code -->
+<script type="text/javascript">
+
+$('.carousel').carousel()
+
+
+var dom = document.getElementById("test","vintage");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var dataBJ = [
+    [1,55,9,56,0.46,18,6,"good"],
+    [2,25,11,21,0.65,34,9,"excellent"],
+    [3,56,7,63,0.3,14,5,"good"],
+    [4,33,7,29,0.33,16,6,"excellent"],
+    [5,42,24,44,0.76,40,16,"excellent"],
+    [6,82,58,90,1.77,68,33,"good"],
+    [7,74,49,77,1.46,48,27,"good"],
+    [8,78,55,80,1.29,59,29,"good"],
+    [9,267,216,280,4.8,108,64,"High levels of pollution"],
+    [10,185,127,216,2.52,61,27,"middle level pollution"],
+    [11,39,19,38,0.57,31,15,"excellent"],
+    [12,41,11,40,0.43,21,7,"excellent"],
+    [13,64,38,74,1.04,46,22,"good"],
+    [14,108,79,120,1.7,75,41,"Light pollution"],
+    [15,108,63,116,1.48,44,26,"Light pollution"],
+    [16,33,6,29,0.34,13,5,"excellent"],
+    [17,94,66,110,1.54,62,31,"good"],
+    [18,186,142,192,3.88,93,79,"middle level pollution"],
+    [19,57,31,54,0.96,32,14,"good"],
+    [20,22,8,17,0.48,23,10,"excellent"],
+    [21,39,15,36,0.61,29,13,"excellent"],
+    [22,94,69,114,2.08,73,39,"good"],
+    [23,99,73,110,2.43,76,48,"good"],
+    [24,31,12,30,0.5,32,16,"excellent"],
+    [25,42,27,43,1,53,22,"excellent"],
+    [26,154,117,157,3.05,92,58,"middle level pollution"],
+    [27,234,185,230,4.09,123,69,"High levels of pollution"],
+    [28,160,120,186,2.77,91,50,"middle level pollution"],
+    [29,134,96,165,2.76,83,41,"Light pollution"],
+    [30,52,24,60,1.03,50,21,"good"],
+    [31,46,5,49,0.28,10,6,"excellent"]
+];
+
+var dataGZ = [
+    [1,26,37,27,1.163,27,13,"excellent"],
+    [2,85,62,71,1.195,60,8,"good"],
+    [3,78,38,74,1.363,37,7,"good"],
+    [4,21,21,36,0.634,40,9,"excellent"],
+    [5,41,42,46,0.915,81,13,"excellent"],
+    [6,56,52,69,1.067,92,16,"good"],
+    [7,64,30,28,0.924,51,2,"good"],
+    [8,55,48,74,1.236,75,26,"good"],
+    [9,76,85,113,1.237,114,27,"good"],
+    [10,91,81,104,1.041,56,40,"good"],
+    [11,84,39,60,0.964,25,11,"good"],
+    [12,64,51,101,0.862,58,23,"good"],
+    [13,70,69,120,1.198,65,36,"good"],
+    [14,77,105,178,2.549,64,16,"good"],
+    [15,109,68,87,0.996,74,29,"Light pollution"],
+    [16,73,68,97,0.905,51,34,"good"],
+    [17,54,27,47,0.592,53,12,"good"],
+    [18,51,61,97,0.811,65,19,"good"],
+    [19,91,71,121,1.374,43,18,"good"],
+    [20,73,102,182,2.787,44,19,"good"],
+    [21,73,50,76,0.717,31,20,"good"],
+    [22,84,94,140,2.238,68,18,"good"],
+    [23,93,77,104,1.165,53,7,"good"],
+    [24,99,130,227,3.97,55,15,"good"],
+    [25,146,84,139,1.094,40,17,"Light pollution"],
+    [26,113,108,137,1.481,48,15,"Light pollution"],
+    [27,81,48,62,1.619,26,3,"good"],
+    [28,56,48,68,1.336,37,9,"good"],
+    [29,82,92,174,3.29,0,13,"good"],
+    [30,106,116,188,3.628,101,16,"Light pollution"],
+    [31,118,50,0,1.383,76,11,"Light pollution"]
+];
+
+var dataSH = [
+    [1,91,45,125,0.82,34,23,"good"],
+    [2,65,27,78,0.86,45,29,"good"],
+    [3,83,60,84,1.09,73,27,"good"],
+    [4,109,81,121,1.28,68,51,"Light pollution"],
+    [5,106,77,114,1.07,55,51,"Light pollution"],
+    [6,109,81,121,1.28,68,51,"Light pollution"],
+    [7,106,77,114,1.07,55,51,"Light pollution"],
+    [8,89,65,78,0.86,51,26,"good"],
+    [9,53,33,47,0.64,50,17,"good"],
+    [10,80,55,80,1.01,75,24,"good"],
+    [11,117,81,124,1.03,45,24,"Light pollution"],
+    [12,99,71,142,1.1,62,42,"good"],
+    [13,95,69,130,1.28,74,50,"good"],
+    [14,116,87,131,1.47,84,40,"mild contamination"],
+    [15,108,80,121,1.3,85,37,"mild contamination"],
+    [16,134,83,167,1.16,57,43,"mild contamination"],
+    [17,79,43,107,1.05,59,37,"good"],
+    [18,71,46,89,0.86,64,25,"good"],
+    [19,97,71,113,1.17,88,31,"good"],
+    [20,84,57,91,0.85,55,31,"good"],
+    [21,87,63,101,0.9,56,41,"good"],
+    [22,104,77,119,1.09,73,48,"Light pollution"],
+    [23,87,62,100,1,72,28,"good"],
+    [24,168,128,172,1.49,97,56,"middle level pollution"],
+    [25,65,45,51,0.74,39,17,"good"],
+    [26,39,24,38,0.61,47,17,"excellent"],
+    [27,39,24,39,0.59,50,19,"excellent"],
+    [28,93,68,96,1.05,79,29,"good"],
+    [29,188,143,197,1.66,99,51,"middle level pollution"],
+    [30,174,131,174,1.55,108,50,"middle level pollution"],
+    [31,187,143,201,1.39,89,53,"middle level pollution"]
+];
+
+var schema = [
+    {name: 'date', index: 0, text: 'day'},
+    {name: 'AQIindex', index: 1, text: 'AQI'},
+    {name: 'PM25', index: 2, text: 'PM2.5'},
+    {name: 'PM10', index: 3, text: 'PM10'},
+    {name: 'CO', index: 4, text: 'CO'},
+    {name: 'NO2', index: 5, text: 'NO2'},
+    {name: 'SO2', index: 6, text: 'SO2'}
+];
+
+
+var itemStyle = {
+    normal: {
+        opacity: 0.8,
+        shadowBlur: 10,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowColor: 'rgba(0, 0, 0, 0.5)'
+    }
+};
+
+option = {
+    backgroundColor: '#404a59',
+    color: [
+        '#dd4444', '#fec42c', '#80F1BE'
+    ],
+    legend: {
+        y: 'top',
+        data: ['beijing', 'shanghai', 'guangzhou'],
+        textStyle: {
+            color: '#fff',
+            fontSize: 16
+        }
+    },
+    grid: {
+        x: '10%',
+        x2: 150,
+        y: '18%',
+        y2: '10%'
+    },
+    tooltip: {
+        padding: 10,
+        backgroundColor: '#222',
+        borderColor: '#777',
+        borderWidth: 1,
+        formatter: function (obj) {
+            var value = obj.value;
+            return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+                + obj.seriesName + ' ' + value[0] + 'day：'
+                + value[7]
+                + '</div>'
+                + schema[1].text + '：' + value[1] + '<br>'
+                + schema[2].text + '：' + value[2] + '<br>'
+                + schema[3].text + '：' + value[3] + '<br>'
+                + schema[4].text + '：' + value[4] + '<br>'
+                + schema[5].text + '：' + value[5] + '<br>'
+                + schema[6].text + '：' + value[6] + '<br>';
+        }
+    },
+    xAxis: {
+        type: 'value',
+        name: 'day',
+        nameGap: 16,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 14
+        },
+        max: 31,
+        splitLine: {
+            show: false
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        }
+    },
+    yAxis: {
+        type: 'value',
+        name: 'AQI',
+        nameLocation: 'end',
+        nameGap: 20,
+        nameTextStyle: {
+            color: '#fff',
+            fontSize: 16
+        },
+        axisLine: {
+            lineStyle: {
+                color: '#eee'
+            }
+        },
+        splitLine: {
+            show: false
+        }
+    },
+    visualMap: [
+        {
+            left: 'right',
+            top: '10%',
+            dimension: 2,
+            min: 0,
+            max: 250,
+            itemWidth: 30,
+            itemHeight: 120,
+            calculable: true,
+            precision: 0.1,
+            text: ['circular：PM2.5'],
+            textGap: 30,
+            textStyle: {
+                color: '#fff'
+            },
+            inRange: {
+                symbolSize: [10, 70]
+            },
+            outOfRange: {
+                symbolSize: [10, 70],
+                color: ['rgba(255,255,255,.2)']
+            },
+            controller: {
+                inRange: {
+                    color: ['#c23531']
+                },
+                outOfRange: {
+                    color: ['#444']
+                }
+            }
+        },
+        {
+            left: 'right',
+            bottom: '5%',
+            dimension: 6,
+            min: 0,
+            max: 50,
+            itemHeight: 120,
+            calculable: true,
+            precision: 0.1,
+            text: ['dark：NO2'],
+            textGap: 30,
+            textStyle: {
+                color: '#fff'
+            },
+            inRange: {
+                colorLightness: [1, 0.5]
+            },
+            outOfRange: {
+                color: ['rgba(255,255,255,.2)']
+            },
+            controller: {
+                inRange: {
+                    color: ['#c23531']
+                },
+                outOfRange: {
+                    color: ['#444']
+                }
+            }
+        }
+    ],
+    series: [
+        {
+            name: 'beijing',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataBJ
+        },
+        {
+            name: 'shanghai',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataSH
+        },
+        {
+            name: 'guangzhou',
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: dataGZ
+        }
+    ]
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+
+</script>
+
+</body>
+</html>
